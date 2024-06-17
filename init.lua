@@ -40,3 +40,13 @@ require('lazy').setup({
   },
   -- More plugins
 })
+
+-- Load vim-plug
+vim.cmd [[
+call plug#begin('~/.local/share/nvim/plugged')
+
+" GitHub Copilot plugin
+Plug 'github/copilot.vim'
+
+call plug#end()
+]]
