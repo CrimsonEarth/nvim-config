@@ -1,2 +1,2 @@
 require("CrimsonEarth.remap");
-print("hello from CrimsonEarth");
+require("CrimsonEarth.lazy_init");
