@@ -2,6 +2,9 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- setting up alternate esc key
+vim.keymap.set("i", "jk", "<Esc>")
+
 -- Define options for key mappings
 local opts = { noremap = true, silent = true }
 
@@ -41,7 +44,11 @@ end
 
 vim.keymap.set('n', '<leader>my', function()
     UserMarks()
-end, { noremap = true, silent = true })
+end, opts)
+
+vim.keymap.set('n', '<leader>ss', function ()
+    print("Hello World")
+end, opts)
 
 -- Registers
 vim.keymap.set('n', '<leader>r', ':registers<CR>', { noremap = true, silent = true })

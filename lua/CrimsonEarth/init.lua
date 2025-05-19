@@ -5,6 +5,8 @@ require("CrimsonEarth.remap");
 -- if not using vscode, go ahead and load lazy
 if not is_vscode then
     require("CrimsonEarth.lazy_init");
+else
+    require("CrimsonEarth.vscode");
 end
 
 -- Windows Configuration for NetRW

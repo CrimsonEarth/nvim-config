@@ -31,6 +31,7 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "gopls",
+                "omnisharp"
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -67,6 +68,12 @@ return {
                                 }
                             }
                         }
+                    }
+                end,
+                ["omnisharp"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.omnisharp.setup {
+                        capabilities = capabilities,
                     }
                 end,
             }
